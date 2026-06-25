@@ -1,0 +1,15 @@
+{
+  "name": "Azure Functions Python x64",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11-bookworm",
+  "platform": "linux/amd64",
+  "runArgs": ["--platform=linux/amd64"],
+  "postCreateCommand": "curl -sL https://deb.nodesource.com/setup_20.x | bash - && apt-get update && apt-get install -y nodejs && npm install -g azure-functions-core-tools@4 azurite",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-azuretools.vscode-azurefunctions"
+      ]
+    }
+  }
+}
